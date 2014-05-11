@@ -257,8 +257,6 @@ uint32_t ASIF_SD_filehandler::append(uint8_t * buffer, uint32_t length) {
 
 	t_len = ASIF_CurrentFile.fileSize();
 	//      ASIF_CurrentFile.seekSet(offset);
-	for (uint32_t i = 0; i < length; i++)
-		ASIF_CurrentFile.write(buffer[i]);
 	size_t t_s = 0;
 	for (uint32_t i = 0; i < length; i++) {
 		t_s += ASIF_CurrentFile.write(buffer[i]);
